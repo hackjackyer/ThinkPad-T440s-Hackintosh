@@ -98,8 +98,8 @@ You can flash the BIOS and remove the whitelist if you plan to use other WLAN ca
 - VoodooInput.kext
 - WhateverGreen.kext
 - USBPorts.kext
-- VoodooSDHC.kext
-- EFICheckDisabler.kext
+- VoodooSDHC.kext (<https://github.com/OSXLatitude/EDP/tree/master/kextpacks/USB/VoodooSDHC/VoodooSDHC.kext/Contents)>
+- EFICheckDisabler.kext (<https://github.com/RehabMan/hack-tools/tree/master/kexts/EFICheckDisabler.kext)>
 
 ### 3. Patched
 
