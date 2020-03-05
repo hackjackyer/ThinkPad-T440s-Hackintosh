@@ -6,7 +6,7 @@ Hackintosh MacOS Mojave 10.14.x and 10.15.x
 
 ### 1. Warning: check you BIOS version
 
-**You should update(downgrade) BIOS to v2.36 version or MOD BIOS to remove Whitelist!**
+**You should update(downgrade) BIOS to v2.36 version or MOD BIOS to remove Wireless Whitelist!**
 
 ### 2. BIOS settings
 
@@ -60,7 +60,9 @@ Hackintosh MacOS Mojave 10.14.x and 10.15.x
 
 #### WIFI
 
-ThinPad T440s M.2 WIFI port is A+E keyed
+Inbuilt Intel WiFi won't work out of the box.
+
+You can flash the BIOS and remove the whitelist if you plan to use other WLAN cards. ThinkPad T440s M.2 WIFI port is A+E keyed
 
 - BCM94360CS2 (Recommend)
 - DW1560 802.11a/b/g/n/ac 2.4 GHz & 5 GHz (Broadcom)
@@ -102,3 +104,23 @@ ThinPad T440s M.2 WIFI port is A+E keyed
 ### 3. Patched
 
 - Copy patch to /ACPI/patched/
+
+## Issue:
+
+### Sound (Headphones and External Microphones)
+
+The only thing we need is the "alc fix" which does fix the problem with Headphones and External Microphones.
+
+This audio codec doesn't do the correction and detection on laptops with Combo Jack so it is required.
+
+Copy the alc_fix folder which is inside the Audio folder from my Github Repo.
+
+Open terminal and type the following commands:
+
+`cd desktop/alc_fix`
+
+`./install.sh`
+
+Or you can simply drag the install.sh file and drop it on the terminal window after you typed the first command
+
+Pres enter and the alc_fix installation is completed
