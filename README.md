@@ -9,15 +9,19 @@ Hackintosh MacOS Mojave 10.14.x and 10.15.x
 
 ### 2. BIOS settings
 
-- `Security -> Security` Chip: **Disabled**
-- `Memory Protection -> Execution Prevention`: **Enabled**
-- `Virtualization -> Intel Virtualization Technology`: **Disabled**
-- `Internal Device Access -> Bottom Cover Tamper Detection`: must be **Disabled**
-- `Anti-Theft -> Current Setting`: **Disabled**;
-- `Anti-Theft -> Computrace -> Current Setting`: **Disabled**
-- `Secure Boot -> Secure Boot`: **Disabled**
-- `UEFI/Legacy Boot`: **UEFI Only**
-- `CSM Support`: **Yes**
+| Item | Setting |
+| ------------- | ------------ |
+| Security Chip | Disabled |
+| Memory Protection Execution Prevention | Enabled |
+| Virtualization | Disabled |
+| Fingerprint Reader | Disabled |
+| Anti Theft | Disabled |
+| Computrace | Disabled |
+| Secure Boot | Disabled |
+| Startup Network Boot | PCI LAN |
+| UEFI/Legacy Boot | UEFI Only |
+| CSM Support | Yes |
+| Boot Mode | Quick |
 
 ### 3. Know your hardware
 
@@ -49,13 +53,14 @@ Hackintosh MacOS Mojave 10.14.x and 10.15.x
 - Integrated Camera
 
 #### What will not work:
-- Wireless (shoud be replace)
+- Wireless
 
 #### WIFI :
 ThinPad T440s M.2 WIFI port is A+E keyed
 - BCM94360CS2 (Recommend)
-- DW1560 (BCM94352Z)
-- DW1830
+- DW1560 802.11a/b/g/n/ac 2.4 GHz & 5 GHz (Broadcom)
+- DW1830 802.11a/b/g/n/ac 2.4 GHz & 5 GHz (Broadcom)
+- DW1820A 802.11a/b/g/n/ac 2.4 GHz & 5 GHz (Broadcom)
 
 ## Installation
 
@@ -71,15 +76,21 @@ ThinPad T440s M.2 WIFI port is A+E keyed
 - OpenCore (soon)
 
 ### 2. Kexts used
+- AirportBrcmFixup.kext (for DW1820A, DW1560)
 - VirtualSMC.kext
 - SMCProcessor.kext
 - SMCBatteryManager.kext
 - SMCSuperIO.kext
+- BrcmBluetoothInjector.kext (requires for BrcmPatchRAM3.kext)
+- BrcmFirmwareData.kext
+- BrcmPatchRAM2.kext (BrcmPatchRAM3.kext for Catalina)
 - Lilu.kext
 - AppleALC.kext
 - VoodooPS2Controller.kext
+- VoodooInput.kext
 - WhateverGreen.kext
 - USBPorts.kext
+- VoodooSDHC.kext
 - EFICheckDisabler.kext
 
 ### 3. Patched
