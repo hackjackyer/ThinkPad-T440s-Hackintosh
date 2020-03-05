@@ -1,9 +1,10 @@
 # MacOS ThinkPad T440s
+
 Hackintosh MacOS Mojave 10.14.x and 10.15.x
 
 ## Pre-Installation
 
-### 1. Warning: check you BIOS version !!!
+### 1. Warning: check you BIOS version
 
 **You should update(downgrade) BIOS to v2.36 version or MOD BIOS to remove Whitelist!**
 
@@ -36,7 +37,8 @@ Hackintosh MacOS Mojave 10.14.x and 10.15.x
 |SD Card reader|Realtek PCI Express Card Reader|
 |Camera|Integrated Camera (USB Internal port)|
 
-#### What will work:
+#### What will work
+
 - Intel HD 4400 Graphics QE/CI
 - USB Ports
 - Intel Ethernet
@@ -52,11 +54,14 @@ Hackintosh MacOS Mojave 10.14.x and 10.15.x
 - ClickPad and TrackPad
 - Integrated Camera
 
-#### What will not work:
+#### What will not work
+
 - Wireless
 
-#### WIFI :
+#### WIFI
+
 ThinPad T440s M.2 WIFI port is A+E keyed
+
 - BCM94360CS2 (Recommend)
 - DW1560 802.11a/b/g/n/ac 2.4 GHz & 5 GHz (Broadcom)
 - DW1830 802.11a/b/g/n/ac 2.4 GHz & 5 GHz (Broadcom)
@@ -70,12 +75,13 @@ ThinPad T440s M.2 WIFI port is A+E keyed
 
 ### 1. Tools needed
 
-- Clover Installer (https://sourceforge.net/projects/cloverefiboot/)
-- Clover Configurator (https://mackie100projects.altervista.org/download-clover-configurator/)
+- Clover Installer (<https://sourceforge.net/projects/cloverefiboot/)>
+- Clover Configurator (<https://mackie100projects.altervista.org/download-clover-configurator/)>
 ...
 - OpenCore (soon)
 
 ### 2. Kexts used
+
 - AirportBrcmFixup.kext (for DW1820A, DW1560)
 - VirtualSMC.kext
 - SMCProcessor.kext
@@ -94,4 +100,5 @@ ThinPad T440s M.2 WIFI port is A+E keyed
 - EFICheckDisabler.kext
 
 ### 3. Patched
+
 - Copy patch to /ACPI/patched/
