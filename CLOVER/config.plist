@@ -6,6 +6,8 @@
 	<dict>
 		<key>AutoMerge</key>
 		<true/>
+		<key>FixHeaders</key>
+		<true/>
 		<key>DSDT</key>
 		<dict>
 			<key>Fixes</key>
@@ -30,6 +32,16 @@
 					<data>X0RTTQ==</data>
 					<key>Replace</key>
 					<data>WERTTQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>_OSI to XOSI</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>X09TSQ==</data>
+					<key>Replace</key>
+					<data>WE9TSQ==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -343,13 +355,13 @@
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Arguments</key>
-		<string>dart=0</string>
+		<string>kext-dev-mode=1 dart=0</string>
 		<key>NeverHibernate</key>
 		<true/>
 		<key>Secure</key>
 		<false/>
 		<key>Timeout</key>
-		<integer>5</integer>
+		<integer>3</integer>
 	</dict>
 	<key>Comment</key>
 	<string>This file is for Lenovo Thinkpad T440S</string>
@@ -381,12 +393,12 @@
 			<key>PciRoot(0)/Pci(0x03,0)</key>
 			<dict>
 				<key>layout-id</key>
-				<data>HAAAAA==</data>
+				<data>IAAAAA==</data>
 			</dict>
 			<key>PciRoot(0)/Pci(0x1b,0)</key>
 			<dict>
 				<key>layout-id</key>
-				<data>HAAAAA==</data>
+				<data>IAAAAA==</data>
 			</dict>
 		</dict>
 	</dict>
@@ -461,9 +473,35 @@
 				<key>Replace</key>
 				<data>igKEwOtC</data>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Disable panic kext logging on 10.15</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>AIoChMB0</data>
+				<key>MatchOS</key>
+				<string>10.15.x</string>
+				<key>Replace</key>
+				<data>AIoChMDr</data>
+			</dict>
 		</array>
 		<key>KextsToPatch</key>
 		<array>
+			<dict>
+				<key>Comment</key>
+				<string>External icons patch</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>RXh0ZXJuYWw=</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>AppleAHCIPort</string>
+				<key>Replace</key>
+				<data>SW50ZXJuYWw=</data>
+			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>Enable Trim on SSD</string>
@@ -489,6 +527,8 @@
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
+		<key>Mobile</key>
+		<true/>
 		<key>ProductName</key>
 		<string>MacBookPro11,1</string>
 		<key>Trust</key>
