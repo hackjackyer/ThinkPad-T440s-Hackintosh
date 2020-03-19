@@ -1,5 +1,7 @@
 # MacOS ThinkPad T440s
 
+## NEW UPDATE : https://github.com/banhbaoxamlan/T440-Hackintosh
+
 Hackintosh MacOS Mojave 10.14.x and 10.15.x
 
 ## Pre-Installation
@@ -44,9 +46,7 @@ Hackintosh MacOS Mojave 10.14.x and 10.15.x
 - Intel Ethernet
 - Audio (All Inputs & Outputs)
 - Sleep and Wake
-- Touch Screen
 - Mini DisplayPort and Mini DisplayPort Audio
-- VGA / D-Sub Port
 - CPU and IGPU Power Management
 - Battery Status
 - Brightness
@@ -56,7 +56,9 @@ Hackintosh MacOS Mojave 10.14.x and 10.15.x
 
 #### What will not work
 
-- Wireless
+- Fingerprint Reader
+- VGA
+- WIFI + Bluetooth
 
 #### WIFI
 
@@ -64,10 +66,10 @@ Inbuilt Intel WiFi won't work out of the box.
 
 You can flash the BIOS and remove the whitelist if you plan to use other WLAN cards. ThinkPad T440s M.2 WIFI port is A+E keyed
 
-- BCM94360CS2 (Recommend)
-- DW1560 802.11a/b/g/n/ac 2.4 GHz & 5 GHz (Broadcom)
-- DW1830 802.11a/b/g/n/ac 2.4 GHz & 5 GHz (Broadcom)
-- DW1820A 802.11a/b/g/n/ac 2.4 GHz & 5 GHz (Broadcom)
+- BCM94360CSAX (Recommend)
+- DW1560 (BCM9435Z) - 802.11a/b/g/n/ac 2.4 GHz & 5 GHz
+- DW1830 (BCM943602BAED) - 802.11a/b/g/n/ac 2.4 GHz & 5 GHz
+- DW1820A (BCM94350ZAE) - 802.11a/b/g/n/ac 2.4 GHz & 5 GHz (Broadcom)
 
 ## Installation
 
@@ -75,31 +77,31 @@ You can flash the BIOS and remove the whitelist if you plan to use other WLAN ca
 
 ## Post-Installation
 
+### DOWNLOAD HERE: [EFI](https://github.com/banhbaoxamlan/T440-Hackintosh/releases/latest)
+
 ### 1. Tools needed
 
-- Clover Installer (<https://sourceforge.net/projects/cloverefiboot/)>
-- Clover Configurator (<https://mackie100projects.altervista.org/download-clover-configurator/)>
-...
-- OpenCore (soon)
+- Clover Bootloader
 
 ### 2. Kexts used
 
+- ACPIBatteryManager.kext
 - AirportBrcmFixup.kext (for DW1820A, DW1560)
-- VirtualSMC.kext
-- SMCProcessor.kext
-- SMCBatteryManager.kext
-- SMCSuperIO.kext
+- AppleALC.kext
 - BrcmBluetoothInjector.kext (requires for BrcmPatchRAM3.kext)
 - BrcmFirmwareData.kext
 - BrcmPatchRAM2.kext (BrcmPatchRAM3.kext for Catalina)
+- EFICheckDisabler.kext
+- VirtualSMC.kext
+- SMCProcessor.kext
+- SMCSuperIO.kext
+- IntelMausi.kext
 - Lilu.kext
-- AppleALC.kext
+- USBPorts.kext
 - VoodooPS2Controller.kext
 - VoodooInput.kext
+- VoodooSDHC.kext
 - WhateverGreen.kext
-- USBPorts.kext
-- VoodooSDHC.kext (<https://github.com/OSXLatitude/EDP/tree/master/kextpacks/USB/VoodooSDHC/VoodooSDHC.kext)>
-- EFICheckDisabler.kext (<https://github.com/RehabMan/hack-tools/tree/master/kexts/EFICheckDisabler.kext)>
 
 ### 3. Patched
 
@@ -124,3 +126,8 @@ Open terminal and type the following commands:
 Or you can simply drag the install.sh file and drop it on the terminal window after you typed the first command
 
 Pres enter and the alc_fix installation is completed
+
+## Support me
+
+- Paypal: <https://www.paypal.me/thebinhluong0519>
+- Ethereum: 0xC202255193D95979A7C937aA3CB5220FAD9E2aBe
