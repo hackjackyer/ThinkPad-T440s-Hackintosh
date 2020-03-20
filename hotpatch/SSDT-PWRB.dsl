@@ -1,17 +1,10 @@
-DefinitionBlock ("", "SSDT", 2, "T440", "ALS0", 0)
+DefinitionBlock ("", "SSDT", 2, "T440", "PWRB", 0)
 {
     Scope (_SB)
     {
-        Device (ALS0)
+        Device (PWRB)
         {
-            Name (_HID, "ACPI0008")
-            Name (_CID, "smc-als")
-            Name (_ALI, 300)
-            Name (_ALR, Package()
-            {
-                Package() { 100, 300 },
-            })
-            
+            Name (_HID, EisaId ("PNP0C0C"))
             Method (_STA, 0, NotSerialized)
             {
                 If (_OSI ("Darwin"))

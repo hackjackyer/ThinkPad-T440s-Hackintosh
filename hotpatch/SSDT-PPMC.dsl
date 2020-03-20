@@ -1,12 +1,12 @@
-DefinitionBlock ("", "SSDT", 2, "T440", "MCHC", 0)
+DefinitionBlock ("", "SSDT", 2, "T440", "PPMC", 0)
 {
     External (_SB.PCI0, DeviceObj)
-
+    
     Scope (_SB.PCI0)
     {
-        Device (MCHC)
+        Device (PPMC)
         {
-            Name (_ADR, Zero)
+            Name (_ADR, 0x001F0002)
             Method (_STA, 0, NotSerialized)
             {
                 If (_OSI ("Darwin"))

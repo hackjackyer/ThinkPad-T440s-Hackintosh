@@ -1,7 +1,7 @@
-DefinitionBlock ("", "SSDT", 2, "T440S", "PMCR", 0)
+DefinitionBlock ("", "SSDT", 2, "X230", "PMCR", 0)
 {
     External (_SB.PCI0.LPC, DeviceObj)
-
+    
     Scope (_SB.PCI0.LPC)
     {
         Device (PMCR)

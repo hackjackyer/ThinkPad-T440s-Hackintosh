@@ -1,6 +1,6 @@
-DefinitionBlock ("", "SSDT", 2, "X230", "SBUS", 0)
+DefinitionBlock ("", "SSDT", 2, "T440", "SBUS", 0)
 {
-    External (_SB_.PCI0.SBUS, DeviceObj)
+    External (_SB.PCI0.SBUS, DeviceObj)
 
     Scope (_SB.PCI0.SBUS)
     {
