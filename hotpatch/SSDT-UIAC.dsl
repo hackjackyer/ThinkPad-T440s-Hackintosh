@@ -12,7 +12,7 @@ DefinitionBlock ("", "SSDT", 2, "T440", "UIAC", 0)
             },
             "XHC", Package()
             {
-                "port-count", Buffer() { 0x0B, 0x00, 0x00, 0x00 },
+                "port-count", Buffer() { 0X0C, 0x00, 0x00, 0x00 },
                 "ports", Package()
                 {
                       "HS01", Package()
@@ -24,6 +24,11 @@ DefinitionBlock ("", "SSDT", 2, "T440", "UIAC", 0)
                       {
                           "UsbConnector", 3,
                           "port", Buffer() { 0x02, 0x00, 0x00, 0x00 },
+                      },
+                      "HS03", Package()
+                      {
+                          "UsbConnector", 3,
+                          "port", Buffer() { 0x03, 0x00, 0x00, 0x00 },
                       },
                       "HS07", Package()
                       {
@@ -45,6 +50,11 @@ DefinitionBlock ("", "SSDT", 2, "T440", "UIAC", 0)
                           "UsbConnector", 3,
                           "port", Buffer() { 0x0B, 0x00, 0x00, 0x00 },
                       },
+                      "SS03", Package()
+                      {
+                          "UsbConnector", 3,
+                          "port", Buffer() { 0X0C, 0x00, 0x00, 0x00 },
+                    },
                 },
             },
         })
