@@ -1,7 +1,7 @@
 DefinitionBlock ("", "SSDT", 2, "T440", "DEH01", 0)
 {
     External (_SB.PCI0.EH01, DeviceObj)
-    External (_SB.PCI0.LPC, DeviceObj)
+    External (_SB.PCI0.LPCB, DeviceObj)
 
     Scope (_SB.PCI0.EH01)
     {
@@ -11,7 +11,7 @@ DefinitionBlock ("", "SSDT", 2, "T440", "DEH01", 0)
             PSTE, 2
         }
     }
-    Scope (_SB.PCI0.LPC)
+    Scope (_SB.PCI0.LPCB)
     {
         OperationRegion (RMP1, PCI_Config, 0xF0, 4)
         Field (RMP1, DWordAcc, NoLock, Preserve)
@@ -31,7 +31,7 @@ DefinitionBlock ("", "SSDT", 2, "T440", "DEH01", 0)
         Method (_INI)
         {
             ^^EH01.PSTE = 3
-            ^^LPC.FDE1 = 1
+            ^^LPCB.FDE1 = 1
         }
     }
 }

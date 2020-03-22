@@ -1,20 +1,20 @@
 DefinitionBlock ("", "SSDT", 2, "T440", "BATT", 0)
 {
-    External (_SB_.PCI0, DeviceObj)
-    External (_SB_.PCI0.LPC, DeviceObj)
-    External (_SB_.PCI0.LPC.EC, DeviceObj)
-    External (_SB_.PCI0.LPC.EC.BAT0, DeviceObj)
-    External (_SB_.PCI0.LPC.EC.BAT0._BIF, MethodObj)
-    External (_SB_.PCI0.LPC.EC.BAT0._BST, MethodObj)
-    External (_SB_.PCI0.LPC.EC.BAT0._HID, IntObj)
-    External (_SB_.PCI0.LPC.EC.BAT0._STA, MethodObj)
-    External (_SB_.PCI0.LPC.EC.BAT1, DeviceObj)
-    External (_SB_.PCI0.LPC.EC.BAT1._BIF, MethodObj)
-    External (_SB_.PCI0.LPC.EC.BAT1._BST, MethodObj)
-    External (_SB_.PCI0.LPC.EC.BAT1._HID, IntObj)
-    External (_SB_.PCI0.LPC.EC.BAT1._STA, MethodObj)
-    External (_SB_.PCI0.LPC.EC.HFSP, FieldUnitObj)
-    External (_SB_.PCI0.LPC.EC.TMP0, FieldUnitObj)
+    External (_SB.PCI0, DeviceObj)
+    External (_SB.PCI0.LPCB, DeviceObj)
+    External (_SB.PCI0.LPCB.EC, DeviceObj)
+    External (_SB.PCI0.LPCB.EC.BAT0, DeviceObj)
+    External (_SB.PCI0.LPCB.EC.BAT0._BIF, MethodObj)
+    External (_SB.PCI0.LPCB.EC.BAT0._BST, MethodObj)
+    External (_SB.PCI0.LPCB.EC.BAT0._HID, IntObj)
+    External (_SB.PCI0.LPCB.EC.BAT0._STA, MethodObj)
+    External (_SB.PCI0.LPCB.EC.BAT1, DeviceObj)
+    External (_SB.PCI0.LPCB.EC.BAT1._BIF, MethodObj)
+    External (_SB.PCI0.LPCB.EC.BAT1._BST, MethodObj)
+    External (_SB.PCI0.LPCB.EC.BAT1._HID, IntObj)
+    External (_SB.PCI0.LPCB.EC.BAT1._STA, MethodObj)
+    External (_SB.PCI0.LPCB.EC.HFSP, FieldUnitObj)
+    External (_SB.PCI0.LPCB.EC.TMP0, FieldUnitObj)
 
     Method (B1B2, 2, NotSerialized)
     {
@@ -30,7 +30,7 @@ DefinitionBlock ("", "SSDT", 2, "T440", "BATT", 0)
         Return (Local0)
     }
 
-    Scope (_SB.PCI0.LPC.EC)
+    Scope (_SB.PCI0.LPCB.EC)
     {
         Method (RE1B, 1, Serialized)
         {
@@ -367,13 +367,13 @@ DefinitionBlock ("", "SSDT", 2, "T440", "BATT", 0)
             })
             Method (FAN0, 0, NotSerialized)
             {
-                Store (B1B2 (\_SB.PCI0.LPC.EC.HFN1, \_SB.PCI0.LPC.EC.HFN2), Local0)
+                Store (B1B2 (\_SB.PCI0.LPCB.EC.HFN1, \_SB.PCI0.LPCB.EC.HFN2), Local0)
                 Return (Local0)
             }
 
             Method (TCPU, 0, NotSerialized)
             {
-                Store (\_SB.PCI0.LPC.EC.TMP0, Local0)
+                Store (\_SB.PCI0.LPCB.EC.TMP0, Local0)
                 Return (Local0)
             }
         }

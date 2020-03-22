@@ -1,11 +1,11 @@
 DefinitionBlock ("", "SSDT", 2, "T440", "PS2K", 0)
 {
     External (_SB.PCI0, DeviceObj)
-    External (_SB.PCI0.LPC, DeviceObj)
-    External (_SB.PCI0.LPC.PS2K, DeviceObj)
-    External (_SB.PCI0.LPC.EC, DeviceObj)
+    External (_SB.PCI0.LPCB, DeviceObj)
+    External (_SB.PCI0.LPCB.PS2K, DeviceObj)
+    External (_SB.PCI0.LPCB.EC, DeviceObj)
     
-    Scope (_SB.PCI0.LPC.EC)
+    Scope (_SB.PCI0.LPCB.EC)
     {
         Method (_Q14, 0, NotSerialized)
         {
@@ -45,7 +45,7 @@ DefinitionBlock ("", "SSDT", 2, "T440", "PS2K", 0)
         }
     }
         
-    Scope (_SB.PCI0.LPC.PS2K)
+    Scope (_SB.PCI0.LPCB.PS2K)
     {
         Method (_DSM, 4)
         {
