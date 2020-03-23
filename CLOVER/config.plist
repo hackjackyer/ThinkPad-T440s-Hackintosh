@@ -18,6 +18,8 @@
 				<true/>
 				<key>FixMutex</key>
 				<true/>
+				<key>FixRTC</key>
+				<true/>
 				<key>FixTMR</key>
 				<true/>
 			</dict>
@@ -42,6 +44,16 @@
 					<data>X09TSQ==</data>
 					<key>Replace</key>
 					<data>WE9TSQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>LPC to LPCB</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>TFBDXw==</data>
+					<key>Replace</key>
+					<data>TFBDQg==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -105,6 +117,26 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
+					<string>KBD to PS2K</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>S0JEXw==</data>
+					<key>Replace</key>
+					<data>UFMySw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>MOU to PS2M</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>TU9VXw==</data>
+					<key>Replace</key>
+					<data>UFMyTQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>SAT1 to SATA</string>
 					<key>Disabled</key>
 					<false/>
@@ -112,16 +144,6 @@
 					<data>U0FUMQ==</data>
 					<key>Replace</key>
 					<data>U0FUQQ==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>URTH to RHUB</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>VVJUSA==</data>
-					<key>Replace</key>
-					<data>UkhVQg==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -175,27 +197,17 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Method(GBIF,3,N) to XBIF</string>
+					<string>BAT0/1_HID to XHID</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>R0JJRgM=</data>
+					<data>CF9ISUQMQdAMCg==</data>
 					<key>Replace</key>
-					<data>WEJJRgM=</data>
+					<data>CFhISUQMQdAMCg==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Method(GBST,4,N) to XBST</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>R0JTVAQ=</data>
-					<key>Replace</key>
-					<data>WEJTVAQ=</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Notify(BAT0, 0x80) to BATC</string>
+					<string>Notify(BAT0 to BATC</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -205,17 +217,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Notify(BAT0, 0x81) to BATC</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>hkJBVDAKgQ==</data>
-					<key>Replace</key>
-					<data>hkJBVEMKgQ==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Notify(BAT1, 0x80) to BATC</string>
+					<string>Notify(BAT1 to BATC</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -225,23 +227,34 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Notfiy(_SB.PCI0.LPC.EC.BAT1, 0x01) to BATC</string>
+					<string>GBIF.SBDV to XBDV</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>hlwvBV9TQl9QQ0kwTFBDX0VDX19CQVQxAQ==</data>
+					<data>oBVTQkRWeAxADQMAU0JEVmI=</data>
 					<key>Replace</key>
-					<data>hlwvBV9TQl9QQ0kwTFBDX0VDX19CQVRDAQ==</data>
+					<data>oBVYQkRWeAxADQMAWEJEVmI=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Notfiy(_SB.PCI0.LPC.EC.BAT1, 0x03) to BATC</string>
+					<string>Store(SB to Store(XB</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>hlwvBV9TQl9QQ0kwTFBDX0VDX19CQVQxCgM=</data>
+					<data>cFNC</data>
 					<key>Replace</key>
-					<data>hlwvBV9TQl9QQ0kwTFBDX0VDX19CQVRDCgM=</data>
+					<data>cFhC</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Multiply(SB to Multiply(XB</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					d1NC</data>
+					<key>Replace</key>
+					<data>d1hC</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -333,13 +346,38 @@
 					<key>Replace</key>
 					<data>WFE2OQA=</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Disable direct EC reads/writes by writing 0 to H8DR when _REV is called</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>lVxfUkVWCgJwCgFcSDhEUg==</data>
+					<key>Replace</key>
+					<data>lVxfUkVWCgJwCgBcSDhEUg==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>HWAC to XWAC EC reads</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>RUNfX0hXQUM=</data>
+					<key>Replace</key>
+					<data>RUNfX1hXQUM=</data>
+				</dict>
 			</array>
 		</dict>
-		<key>DisabledAML</key>
+		<key>DropTables</key>
 		<array>
-			<string>SSDT.aml</string>
-			<string>SSDT-XCPM.aml</string>
-			<string>SSDT-PluginType1.aml</string>
+			<dict>
+				<key>Signature</key>
+				<string>DMAR</string>
+			</dict>
+			<dict>
+				<key>Signature</key>
+				<string>ECDT</string>
+			</dict>
 		</array>
 		<key>SSDT</key>
 		<dict>
@@ -355,7 +393,7 @@
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Arguments</key>
-		<string>kext-dev-mode=1 dart=0</string>
+		<string>npci=0x3000 dart=0</string>
 		<key>NeverHibernate</key>
 		<true/>
 		<key>Secure</key>
@@ -364,7 +402,7 @@
 		<integer>3</integer>
 	</dict>
 	<key>Comment</key>
-	<string>This file is for Lenovo Thinkpad T440S</string>
+	<string>This file is for Lenovo Thinkpad T440/T440s</string>
 	<key>Devices</key>
 	<dict>
 		<key>Properties</key>
@@ -393,12 +431,12 @@
 			<key>PciRoot(0)/Pci(0x03,0)</key>
 			<dict>
 				<key>layout-id</key>
-				<data>IAAAAA==</data>
+				<data>HAAAAA==</data>
 			</dict>
 			<key>PciRoot(0)/Pci(0x1b,0)</key>
 			<dict>
 				<key>layout-id</key>
-				<data>IAAAAA==</data>
+				<data>HAAAAA==</data>
 			</dict>
 		</dict>
 	</dict>
@@ -463,7 +501,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Disable panic kext logging on 10.14.x</string>
+				<string>Disable panic kext logging on 10.14</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
@@ -490,7 +528,7 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>External icons patch</string>
+				<string>External Icons Patch</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
