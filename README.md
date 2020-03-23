@@ -2,7 +2,7 @@
 
 ## NEW UPDATE : https://github.com/banhbaoxamlan/T440-Hackintosh
 
-Hackintosh MacOS Mojave 10.14.x and 10.15.x
+Hackintosh MacOS Mojave 10.14.6 and 10.15.x
 
 ## Pre-Installation
 
@@ -16,12 +16,11 @@ Hackintosh MacOS Mojave 10.14.x and 10.15.x
 | ------------- | ------------ |
 | Security Chip | Disabled |
 | Memory Protection Execution Prevention | Enabled |
-| Virtualization | Disabled |
+| Virtualization | Enabled |
 | Fingerprint Reader | Disabled |
 | Anti Theft | Disabled |
 | Computrace | Disabled |
 | Secure Boot | Disabled |
-| Startup Network Boot | PCI LAN |
 | UEFI/Legacy Boot | UEFI Only |
 | CSM Support | Yes |
 | Boot Mode | Quick |
@@ -92,9 +91,7 @@ You can flash the BIOS and remove the whitelist if you plan to use other WLAN ca
 - BrcmFirmwareData.kext
 - BrcmPatchRAM2.kext (BrcmPatchRAM3.kext for Catalina)
 - EFICheckDisabler.kext
-- VirtualSMC.kext
-- SMCProcessor.kext
-- SMCSuperIO.kext
+- FakeSMC.kext
 - IntelMausi.kext
 - Lilu.kext
 - USBPorts.kext
