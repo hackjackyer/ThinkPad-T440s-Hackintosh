@@ -4,6 +4,8 @@
 
 Hackintosh MacOS Mojave 10.14.6 and 10.15.x
 
+**March 24, 2020 - OpenCore Bootloader**
+
 ## Pre-Installation
 
 ### 1. Warning: check you BIOS version
