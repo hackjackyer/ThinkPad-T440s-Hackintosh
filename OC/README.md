@@ -11,9 +11,9 @@ Still testing, becareful
 - [x] USB Ports
 - [x] Intel Ethernet
 - [x] CPU and IGPU Power Management
-- [ ] Audio
+- [x] Audio
 - [x] Battery Status
-- [ ] Brightness
-- [ ] Function Keys (Fn)
+- [x] Brightness
+- [x] Function Keys (Fn)
 - [x] ClickPad and TrackPad
 - [x] Integrated Camera
